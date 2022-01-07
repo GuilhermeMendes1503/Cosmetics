@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Staatliches", cursive;
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 8vh;
+  background-color: #383838;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+nav a:hover {
+  color: #00b4a5;
+}
+
+.nav_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+.nav_links li {
+  padding-right: 3vw;
+}
+
+.nav_left {
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav_left .logo {
+  background-image: url("../../img/logo.png");
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.nav_left .nav_title {
+  padding-left: 10px;
+}
+
+.nav_burger {
+  background-image: url(../../img/burger.svg);
+  background-size: cover;
+  margin-right: 20px;
+  height: 20px;
+  width: 25px;
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_burger {
+    display: block;
+    z-index: 10;
+  }
+  .nav_links {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    position: fixed;
+    right: 0;
+    top: 9vh;
+    width: 55%;
+    padding: 30px;
+    min-height: 8vh;
+    background-color: #383838;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  .nav_links li {
+    padding-top: 5px;
+    visibility: hidden;
+  }
+  .nav-active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  .nav-active li {
+    visibility: visible;
+  }
+}
+
+.content {
+  margin: 20px;
+  margin-top: 70px;
+  padding: 5px;
+  background-color: #f4f4f4;
+}
+/*# sourceMappingURL=main.css.map */

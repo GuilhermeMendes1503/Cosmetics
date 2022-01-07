@@ -1,0 +1,116 @@
+// Imports
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+// Color variables
+$gray: #383838;
+$lightblue: #00b4a5;
+$textlight: white;
+$textdark: black;
+
+// Devices variables
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Staatliches", cursive;
+  overflow-x: hidden;
+}
+// Nav Code
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  min-height: 8vh;
+  background-color: $gray;
+  color: $textlight;
+  align-items: center;
+  min-width: max-content;
+  a {
+    text-decoration: none;
+    color: $textlight;
+    letter-spacing: 2px;
+    transition: all ease 0.5s;
+    &:hover {
+      color: $lightblue;
+    }
+  }
+}
+
+.nav_links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+  li {
+    padding-right: 3vw;
+  }
+}
+.nav_left {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  .logo {
+    background-image: url("../../img/logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  .nav_title {
+    padding-left: 10px;
+  }
+}
+.nav_burger {
+  background-image: url(../../img/burger.svg);
+  background-size: cover;
+  margin-right: 20px;
+  height: 20px;
+  width: 25px;
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_burger {
+    display: block;
+    z-index: 10;
+  }
+  .nav_links {
+    justify-content: flex-start;
+    position: fixed;
+    right: 0;
+    top: 9vh;
+    width: 55%;
+    padding: 30px;
+    min-height: 8vh;
+    background-color: $gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease-in;
+    transform: translateX(100%);
+
+    li {
+      padding-top: 5px;
+      visibility: hidden;
+    }
+  }
+  .nav-active {
+    transform: translateX(0%);
+    li {
+      visibility: visible;
+    }
+  }
+}
+
+// Content Code
+
+.content {
+  margin: 20px;
+  margin-top: 70px;
+  padding: 5px;
+  background-color: #f4f4f4;
+}
